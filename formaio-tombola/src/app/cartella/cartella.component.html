@@ -1,3 +1,4 @@
+<!--<p>cartella works!</p>-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,24 +9,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
   </head>
   <body>
-    <h1 align="center">Tombola di Formaio Filippo </h1>
-    <div align="center">
-      <p><font color="red"><strong> Sono AppComponent</strong></font></p>
-      <form>
-        <div class="form-group">
-          <label> <h3> dimmi un numero </h3></label>
-          <br>
-          <label id="visuaNumero">Numero Casuale</label>
-        </div>
-        <button id="bottone" type="submit" class="btn btn-warning" (click)="generaNumero()">Estrai</button>
-      </form>
+   <div align="center">
+				<p><font color="red"><strong>Sono il componente Cartella</strong></font></p>
+				<form>
+					<div class="form-group">
+            <p>Ultimo numero estratto</p>
+						<label><h3>{{ultimoNumero}}</h3></label>
+            <p>Lista numeri estratti</p>
+            <label *ngFor="let numero of numeriEstratti"><h3>{{numero}} -  </h3></label>
+  </div>
 
-      <app-cartella [numeriEstratti]="numeriUsciti" [ultimoNumero]="ultimoNumero"></app-cartella>
-    </div>
 
+				</form>
+			</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
